@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.3.final using JasperReports Library version 6.4.3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ProgramReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5cffeeb2-9752-413f-a460-39f40f45429a">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="cHJvZ3JhbWEgQVMgLDcxLDExNSw3OWU4ZWNmYy05MzVlLTRiMzUtODU0ZC0zZjQwMWEzMTgwZWU7"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="tesdb"/>
+	<parameter name="imagen_1" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT programa.id,
+	programa.numero_alumnos,
+	programa.carrera,
+	programa.edificio
+FROM programa]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+	</field>
+	<field name="numero_alumnos" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="numero_alumnos"/>
+	</field>
+	<field name="carrera" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="carrera"/>
+	</field>
+	<field name="edificio" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="edificio"/>
+	</field>
+	<group name="id">
+		<groupExpression><![CDATA[$F{id}]]></groupExpression>
+	</group>
+	<group name="numero_alumnos">
+		<groupExpression><![CDATA[$F{numero_alumnos}]]></groupExpression>
+	</group>
+	<group name="carrera">
+		<groupExpression><![CDATA[$F{carrera}]]></groupExpression>
+	</group>
+	<group name="edificio">
+		<groupExpression><![CDATA[$F{edificio}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="73" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="160" y="11" width="240" height="30" forecolor="#FFFFFF" backcolor="#07114F" uuid="b5a2ac75-3557-4e8d-aab8-fec29639abc2"/>
+				<box>
+					<pen lineStyle="Double" lineColor="#3F3CBD"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bodoni MT Black" size="19"/>
+				</textElement>
+				<text><![CDATA[Programa Educativo]]></text>
+			</staticText>
+			<image>
+				<reportElement x="40" y="1" width="50" height="50" uuid="116e4a8d-7651-4d3c-aaf2-9010fd2ff0b9"/>
+				<imageExpression><![CDATA[$P{imagen_1}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="141" height="30" forecolor="#FFFFFF" backcolor="#413FD9" uuid="6059c134-89f6-49c2-93a9-5907092f4e13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[   Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="141" y="0" width="138" height="30" forecolor="#FFFFFF" backcolor="#413FD9" uuid="64810c92-ff05-414d-b76d-0a980b4daec2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Numero de Alumnos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="279" y="0" width="138" height="30" forecolor="#FFFFFF" backcolor="#413FD9" uuid="417c3045-7822-4315-adab-071fab811037"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Carrera]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="417" y="0" width="138" height="30" forecolor="#FFFFFF" backcolor="#413FD9" uuid="6f625526-4497-4f31-8449-2fa3c24c85c7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Edificio]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="141" height="30" backcolor="#F2F598" uuid="1034133c-0a93-4f67-be59-5ba8e528d595"/>
+				<box>
+					<pen lineColor="#FCF912"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[   $F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="141" y="0" width="138" height="30" backcolor="#F2F598" uuid="4d2db10b-f592-4dfe-a7fe-b13173f14579"/>
+				<box>
+					<pen lineColor="#FCF912"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[   $F{numero_alumnos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="279" y="0" width="138" height="30" backcolor="#F2F598" uuid="e4df88ba-06a9-40f0-a4ba-a5ed3a3079a0"/>
+				<box>
+					<pen lineColor="#FCF912"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[   $F{carrera}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="417" y="0" width="138" height="30" backcolor="#F2F598" uuid="22f61b36-102d-4ce4-9f54-29624bda3a02"/>
+				<box>
+					<pen lineColor="#FCF912"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[   $F{edificio}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
